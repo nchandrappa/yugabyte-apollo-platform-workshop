@@ -6,7 +6,7 @@
 
 
 - Create a [Yugabyte Cloud Instance](https://www.yugabyte.com/cloud/)
-- Navigate to `Add IP Allow List` page and add your local workstation ip-address 
+   - Navigate to `Add IP Allow List` page and add your local workstation ip-address 
   to allow access to the YugabyteDB cloud instance from your workstation
 - create an account on [Apollo Studio](studio.apollographql.com) 
 
@@ -16,11 +16,11 @@ This application has two components, Server app which implements the GraphQL sch
 with YugabyteDB datasource as backend for storing the mutations and The Client App which queries the GraphQL Server
 for displaying the Travel options and checkout functionality for the users.
 
-## Import the the Server and Client project into your IDE
+## Import the the `server-initial` and `client` project into your IDE
 
-The app is split out into two folders:
+This repo has three folders:
 - `server-initial`: React project we will be incremently building to implement GraphQL APIs using Apollo Server and YugabyteDB Database
-- `Server`: Complete code for Apollo Server configured to use YugabyteDB database for Storing data using GraphQL Mutationsl
+- `server`: Complete code for Apollo Server configured to use YugabyteDB database for Storing data using GraphQL Mutationsl
 - `client`: Space explorer app built using ReactJS
 
 
@@ -94,6 +94,7 @@ type LaunchConnection {
   hasMore: Boolean!
   launches: [Launch]!
 }
+```
 
 ### Step 3: Add GraphQL Queries
 

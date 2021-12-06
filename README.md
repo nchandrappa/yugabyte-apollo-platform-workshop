@@ -26,6 +26,7 @@ This application has two components, Server app which implements the GraphQL sch
 with YugabyteDB datasource as backend for storing the mutations and The Client App which queries the GraphQL Server
 for displaying the Travel options and checkout functionality for the users.
 
+![Space Explorer application](./images/space-explorer-image.png)
 
 ## Agenda
 
@@ -37,25 +38,6 @@ for displaying the Travel options and checkout functionality for the users.
 - Connect to Apollo Studio and Run sample queries
 - Run the Client app
 
+## Workshop Hands-on Session
 
-## File structure
-
-The app is split out into two folders:
-- `Server`: Apollo Server configured to use YugabyteDB database for Storing data using GraphQL Mutationsl
-- `final`: Space explorer app built using ReactJS
-
-From within the `start` and `final` directories, there are two folders (one for `server` and one for `client`).
-
-## Installation
-
-To run the app, run these commands in two separate terminal windows from the root:
-
-```bash
-cd server && npm i && npm start
-```
-
-and
-
-```bash
-cd client && npm i && npm start
-```
+Steps for running the hands-on session can be found [here](./workshop.md).
