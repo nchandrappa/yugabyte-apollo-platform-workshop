@@ -30,13 +30,18 @@ module.exports.paginateResults = ({
 
 module.exports.createStore = () => {
   const db = new Sequelize({
-    // dialect: 'sqlite',
-    // storage: './store.sqlite'
-    host: 'localhost',
+    host: '6d6eafb9-813c-4f35-9e36-8090981641d4.cloudportal.yugabyte.com',
     port: '5433',
     dialect: 'postgres',
-    username: 'yugabyte',
-    database: 'yugabyte'
+    username: 'admin',
+    password: '5WI5BjX7xZuHqaYjI8asRYCgDPXz6X',
+    database: 'yugabyte',
+    dialectOptions: {
+      ssl: {
+        rejectUnauthorized: false,
+        // ca: fs.readFileSync('/Users/nikhil/.postgresql/root.cer').toString(),
+      }
+    }
   });
 
   const users = db.define('user', {
